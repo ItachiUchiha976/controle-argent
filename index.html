@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprends le Contrôle de ton Argent — Guide Complet 2026</title>
+  <meta name="description" content="La méthode complète pour maîtriser son budget, épargner automatiquement, sortir des dettes et commencer à investir. Taux 2026 vérifiés : Livret A, LEP, PEA, ETF, Assurance-vie.">
+  <meta property="og:title" content="Reprends le Contrôle de ton Argent — Guide 2026">
+  <meta property="og:description" content="Budget 50/30/20 · Épargne automatique · Dettes · PEA · ETF · Taux vérifiés 2026">
+  <meta property="og:image" content="https://itachiuchiha976.github.io/controle-argent/og-cover.png">
+  <meta property="og:url" content="https://itachiuchiha976.github.io/controle-argent/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --navy-med: #1B2A3B;
+      --green: #00875A;
+      --green-accent: #00C853;
+      --green-light: #E8F5E9;
+      --gold: #F9A825;
+      --gold-soft: #FFF9C4;
+      --white: #ffffff;
+      --gray-light: #F5F7FA;
+      --gray-text: #37474F;
+      --gray-muted: #78909C;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color:var(--gray-text); background:var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a2e45 60%, #0e2237 100%);
+      color: var(--white);
+      padding: 64px 24px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--gold);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 span { color: var(--green-accent); }
+    .hero .subtitle {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: #B2DFDB;
+      margin-bottom: 36px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .hero-checklist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+    .hero-checklist li {
+      list-style: none;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(0,200,83,0.3);
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-size: 14px;
+      color: #E0F2F1;
+    }
+    .hero-checklist li::before { content: "✓  "; color: var(--green-accent); font-weight: 700; }
+    .price-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .price-tag {
+      font-size: 52px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .price-tag sup { font-size: 24px; vertical-align: top; margin-top: 8px; }
+    .price-note { font-size: 13px; color: #90A4AE; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 800;
+      padding: 18px 44px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 6px 24px rgba(249,168,37,0.45);
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,168,37,0.55); }
+    .cta-sub { font-size: 13px; color: #78909C; margin-top: 10px; }
+
+    /* ── SECTION ── */
+    section { padding: 64px 24px; max-width: 860px; margin: 0 auto; }
+    h2.section-title {
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .section-sub { text-align: center; color: var(--gray-muted); margin-bottom: 40px; font-size: 16px; }
+    .divider { width: 60px; height: 4px; background: var(--green); border-radius: 2px; margin: 14px auto 32px; }
+
+    /* ── STAT STRIP ── */
+    .stat-strip {
+      background: var(--navy);
+      color: var(--white);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .stat-item { flex: 1; min-width: 160px; }
+    .stat-num { font-size: 36px; font-weight: 800; color: var(--gold); }
+    .stat-label { font-size: 13px; color: #B0BEC5; margin-top: 4px; line-height: 1.4; }
+
+    /* ── SOMMAIRE ── */
+    .sommaire-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .partie-card {
+      border: 1.5px solid var(--green-light);
+      border-radius: 12px;
+      padding: 22px;
+      background: var(--white);
+      transition: box-shadow .15s;
+    }
+    .partie-card:hover { box-shadow: 0 4px 20px rgba(0,135,90,0.12); }
+    .partie-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .partie-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .partie-chapters { list-style: none; }
+    .partie-chapters li {
+      font-size: 13px;
+      color: var(--gray-muted);
+      padding: 3px 0;
+    }
+    .partie-chapters li::before { content: "→  "; color: var(--green); font-size: 11px; }
+
+    /* ── APERCU ── */
+    .apercu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .apercu-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--gray-light);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .apercu-icon {
+      font-size: 26px;
+      min-width: 36px;
+      text-align: center;
+    }
+    .apercu-body h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .apercu-body p  { font-size: 13px; color: var(--gray-muted); line-height: 1.5; }
+
+    /* ── TAUX ── */
+    .taux-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .taux-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .taux-card .taux-val { font-size: 32px; font-weight: 800; color: var(--green-accent); }
+    .taux-card .taux-name { font-size: 14px; font-weight: 700; margin: 4px 0; }
+    .taux-card .taux-plafond { font-size: 12px; color: #90A4AE; }
+    .taux-card .taux-source { font-size: 10px; color: #607D8B; margin-top: 6px; }
+    .taux-card.gold-card { background: var(--gold-soft); border: 2px solid var(--gold); }
+    .taux-card.gold-card .taux-val { color: #E65100; }
+    .taux-card.gold-card .taux-name { color: var(--navy); }
+    .taux-card.gold-card .taux-plafond { color: var(--gray-muted); }
+    .taux-card.gold-card .taux-source { color: var(--gray-muted); }
+
+    /* ── POUR QUI ── */
+    .profils-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .profil-card {
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      background: var(--green-light);
+      border: 1.5px solid var(--green);
+    }
+    .profil-emoji { font-size: 32px; margin-bottom: 10px; }
+    .profil-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .profil-desc  { font-size: 13px; color: var(--gray-muted); line-height: 1.5; }
+
+    /* ── CTA BOTTOM ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy), #1a2e45);
+      color: var(--white);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .cta-section h2 { font-size: clamp(22px, 4vw, 34px); font-weight: 800; margin-bottom: 12px; }
+    .cta-section p  { color: #90A4AE; margin-bottom: 36px; font-size: 16px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: #ECEFF1;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 11px;
+      color: #90A4AE;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #607D8B;
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+    }
+    footer a { color: var(--green-accent); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .price-tag { font-size: 42px; }
+      .cta-btn { padding: 16px 32px; font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ───────────────────────────────────────────────────────────────── -->
+<div class="hero">
+  <div class="hero-badge">Édition 2026 — Taux vérifiés</div>
+  <h1>Reprends le <span>Contrôle</span><br>de ton Argent</h1>
+  <p class="subtitle">La méthode complète en 29 pages pour maîtriser ton budget, épargner sans effort, sortir des dettes et commencer à investir intelligemment.</p>
+
+  <ul class="hero-checklist">
+    <li>Méthode budget 50/30/20</li>
+    <li>Épargne automatique</li>
+    <li>Boule de Neige vs Avalanche</li>
+    <li>Livret A, LEP, PEA — taux vérifiés</li>
+    <li>ETF MSCI World expliqué</li>
+    <li>Plan d'action 90 jours</li>
+    <li>Glossaire 20 termes essentiels</li>
+  </ul>
+
+  <div class="price-block">
+    <div>
+      <div class="price-tag"><sup>€</sup>9</div>
+      <div class="price-note">Paiement unique · Accès à vie · PDF immédiat</div>
+    </div>
+  </div>
+
+  <a href="https://gumroad.com" class="cta-btn">Télécharger le guide — 9€</a>
+  <p class="cta-sub">Paiement sécurisé via Gumroad · Livraison instantanée · Satisfait ou remboursé 30 jours</p>
+</div>
+
+<!-- ── STATS ───────────────────────────────────────────────────────────────── -->
+<div class="stat-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">52%</div>
+      <div class="stat-label">des Français n'ont pas d'épargne de précaution suffisante (INSEE, 2025)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">29</div>
+      <div class="stat-label">pages de méthodes actionnables et de données vérifiées</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">90</div>
+      <div class="stat-label">jours pour mettre tout le système en place, étape par étape</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0€</div>
+      <div class="stat-label">d'outil payant requis — tout est gratuit ou offert par ta banque</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SOMMAIRE ──────────────────────────────────────────────────────────── -->
+<section>
+  <h2 class="section-title">Ce que tu vas apprendre</h2>
+  <div class="divider"></div>
+  <div class="sommaire-grid">
+    <div class="partie-card">
+      <div class="partie-num">Partie 1</div>
+      <div class="partie-title">Le Budget</div>
+      <ul class="partie-chapters">
+        <li>Méthode 50/30/20 appliquée</li>
+        <li>Calcule ton revenu disponible réel</li>
+        <li>Les 3 erreurs qui font exploser le budget</li>
+      </ul>
+    </div>
+    <div class="partie-card">
+      <div class="partie-num">Partie 2</div>
+      <div class="partie-title">Épargne & Fonds d'Urgence</div>
+      <ul class="partie-chapters">
+        <li>Le principe « se payer en premier »</li>
+        <li>Combien mettre en fonds d'urgence</li>
+        <li>Livrets réglementés 2026 — taux vérifiés</li>
+      </ul>
+    </div>
+    <div class="partie-card">
+      <div class="partie-num">Partie 3</div>
+      <div class="partie-title">Sortir des Dettes</div>
+      <ul class="partie-chapters">
+        <li>Inventaire complet de tes dettes</li>
+        <li>Boule de Neige vs Avalanche</li>
+        <li>Négocier ses taux avec sa banque</li>
+      </ul>
+    </div>
+    <div class="partie-card">
+      <div class="partie-num">Partie 4</div>
+      <div class="partie-title">Bases Investissement 2026</div>
+      <ul class="partie-chapters">
+        <li>Intérêts composés & inflation</li>
+        <li>PEA, ETF, Assurance-vie expliqués</li>
+        <li>Choisir son courtier en ligne</li>
+        <li>Tableau comparatif tous placements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── APERÇUS ─────────────────────────────────────────────────────────────── -->
+<section style="background: var(--gray-light); padding: 64px 24px;">
+  <div style="max-width:860px; margin:0 auto;">
+    <h2 class="section-title">Un aperçu du contenu</h2>
+    <div class="divider"></div>
+    <div class="apercu-list">
+      <div class="apercu-item">
+        <div class="apercu-icon">📊</div>
+        <div class="apercu-body">
+          <h3>Tableau 50/30/20 avec exemple chiffré</h3>
+          <p>Visualise exactement comment répartir 2 000€/mois de salaire net : 1 000€ besoins, 600€ envies, 400€ épargne. Avec les formules d'adaptation selon ta situation.</p>
+        </div>
+      </div>
+      <div class="apercu-item">
+        <div class="apercu-icon">💳</div>
+        <div class="apercu-body">
+          <h3>Comparatif Boule de Neige vs Avalanche — avec simulation chiffrée</h3>
+          <p>Exemple concret sur 4 dettes (découvert, carte crédit 18,5%, crédit conso 5,2%, prêt étudiant 1%) : quelle méthode choisir, dans quel ordre attaquer, combien économiser.</p>
+        </div>
+      </div>
+      <div class="apercu-item">
+        <div class="apercu-icon">📈</div>
+        <div class="apercu-body">
+          <h3>Table des intérêts composés sur 20-30 ans</h3>
+          <p>Ce que deviennent 50€, 100€ ou 200€/mois investis à 7% de rendement annuel sur 20 à 30 ans. Les chiffres qui motivent à commencer aujourd'hui plutôt que demain.</p>
+        </div>
+      </div>
+      <div class="apercu-item">
+        <div class="apercu-icon">🏦</div>
+        <div class="apercu-body">
+          <h3>Comparatif des 5 ETF PEA recommandés</h3>
+          <p>Amundi MSCI World, iShares MSCI World Swap PEA, Amundi S&P 500… Frais (TER), indices, taille. Lequel choisir pour un débutant en 2026.</p>
+        </div>
+      </div>
+      <div class="apercu-item">
+        <div class="apercu-icon">📅</div>
+        <div class="apercu-body">
+          <h3>Plan d'action semaine par semaine sur 90 jours</h3>
+          <p>Semaine 1 : budget + inventaire dettes. Semaine 2 : virement automatique + annulation abonnements inutiles. Semaine 3 : PEA ouvert + premier investissement. Et la suite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TAUX 2026 ────────────────────────────────────────────────────────────── -->
+<section>
+  <h2 class="section-title">Les taux 2026 vérifiés sur les sources officielles</h2>
+  <p class="section-sub">Banque de France · presse.economie.gouv.fr · ACPR · 15 janvier 2026</p>
+  <div class="divider"></div>
+  <div class="taux-grid">
+    <div class="taux-card gold-card">
+      <div class="taux-val">2,5%</div>
+      <div class="taux-name">LEP</div>
+      <div class="taux-plafond">Plafond 10 000€ · Sous conditions</div>
+      <div class="taux-source">★ Meilleur taux sans risque FR</div>
+    </div>
+    <div class="taux-card">
+      <div class="taux-val">1,5%</div>
+      <div class="taux-name">Livret A</div>
+      <div class="taux-plafond">Plafond 22 950€ · Tous</div>
+      <div class="taux-source">Depuis fév. 2026 · Garanti État</div>
+    </div>
+    <div class="taux-card">
+      <div class="taux-val">1,5%</div>
+      <div class="taux-name">LDDS</div>
+      <div class="taux-plafond">Plafond 12 000€ · Majeurs FR</div>
+      <div class="taux-source">Depuis fév. 2026 · Exonéré</div>
+    </div>
+    <div class="taux-card" style="background:#1B2A3B;">
+      <div class="taux-val">2,65%</div>
+      <div class="taux-name">Assurance-vie fonds €</div>
+      <div class="taux-plafond">Rendement moyen 2025</div>
+      <div class="taux-source">ACPR · France Assureurs 2026</div>
+    </div>
+    <div class="taux-card" style="background:#1B2A3B;">
+      <div class="taux-val" style="font-size:22px;">~7-10%</div>
+      <div class="taux-name">PEA + ETF MSCI World</div>
+      <div class="taux-plafond">Rendement hist. long terme*</div>
+      <div class="taux-source">*Pas garanti · Risque de perte</div>
+    </div>
+  </div>
+  <p style="text-align:center; font-size:11px; color:var(--gray-muted); margin-top:16px;">
+    Sources : Banque de France communiqué 15/01/2026 · presse.economie.gouv.fr · ACPR rapport 2025 · finary.com (mai 2026). Tous vérifiés au 26/06/2026.
+  </p>
+</section>
+
+<!-- ── POUR QUI ─────────────────────────────────────────────────────────────── -->
+<section style="background: var(--navy); color: var(--white); padding: 64px 24px; max-width:100%;">
+  <div style="max-width:860px; margin:0 auto;">
+    <h2 class="section-title" style="color:var(--white);">Ce guide est fait pour toi si…</h2>
+    <div class="divider" style="background:var(--gold);"></div>
+    <div class="profils-grid">
+      <div class="profil-card">
+        <div class="profil-emoji">💸</div>
+        <div class="profil-title">Tu n'arrives pas à épargner</div>
+        <div class="profil-desc">Fin du mois, il ne reste rien. Tu veux comprendre pourquoi et mettre un système en place.</div>
+      </div>
+      <div class="profil-card">
+        <div class="profil-emoji">💳</div>
+        <div class="profil-title">Tu as des dettes qui traînent</div>
+        <div class="profil-desc">Crédit conso, découvert, carte bleue… Tu veux une stratégie claire pour t'en sortir.</div>
+      </div>
+      <div class="profil-card">
+        <div class="profil-emoji">📊</div>
+        <div class="profil-title">Tu entends parler de PEA et ETF mais tu ne sais pas par où commencer</div>
+        <div class="profil-desc">On t'explique tout de zéro, sans jargon ni complexité artificielle.</div>
+      </div>
+      <div class="profil-card">
+        <div class="profil-emoji">🎯</div>
+        <div class="profil-title">Tu veux un plan d'action concret</div>
+        <div class="profil-desc">Pas juste de la théorie. Un plan semaine par semaine sur 90 jours avec des actions précises.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ────────────────────────────────────────────────────────────── -->
+<div class="cta-section">
+  <h2>Prêt à reprendre le contrôle de ton argent ?</h2>
+  <p>Un investissement de 9€ qui peut changer ta relation avec l'argent pour les 30 prochaines années.</p>
+  <div class="price-block" style="margin-bottom:24px;">
+    <div>
+      <div class="price-tag"><sup>€</sup>9</div>
+      <div class="price-note" style="color:#607D8B;">PDF 29 pages · Téléchargement immédiat · Accès à vie</div>
+    </div>
+  </div>
+  <a href="https://gumroad.com" class="cta-btn">Télécharger maintenant — 9€</a>
+  <p style="margin-top:12px; font-size:12px; color:#607D8B;">Paiement sécurisé · Livraison par email · Remboursement garanti 30 jours</p>
+</div>
+
+<!-- ── DISCLAIMER ──────────────────────────────────────────────────────────── -->
+<div style="padding: 32px 24px; background: #ECEFF1;">
+  <div class="disclaimer">
+    <strong>Avertissement légal :</strong> Ce guide est fourni à des fins d'éducation financière générale uniquement. Il ne constitue pas un conseil en investissement personnalisé ni une recommandation d'achat ou de vente de produits financiers. L'auteur n'est pas conseiller en gestion de patrimoine (CGP) agréé par l'AMF. Tout investissement comporte un risque de perte en capital. Les performances passées ne garantissent pas les performances futures. Les taux mentionnés sont ceux en vigueur au 26/06/2026 et peuvent évoluer. Vérifier sur banque-france.fr · economie.gouv.fr · amf-france.org.
+  </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────────────── -->
+<footer>
+  <p>© 2026 <a href="https://www.youtube.com/@tonargentexplique" target="_blank">L'Argent Expliqué</a> · Tous droits réservés</p>
+  <p style="margin-top:6px;">Chaîne YouTube : <a href="https://www.youtube.com/@tonargentexplique" target="_blank">@tonargentexplique</a></p>
+</footer>
+
+</body>
+</html>
