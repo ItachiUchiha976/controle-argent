@@ -502,6 +502,34 @@
   </div>
 </section>
 
+<!-- ── CAPTURE EMAIL ──────────────────────────────────────────────────────── -->
+<section style="background:var(--green-light); padding:56px 24px;">
+  <div style="max-width:580px; margin:0 auto; text-align:center;">
+    <h2 style="color:var(--navy); font-size:clamp(1.4rem,3vw,1.9rem); font-weight:800; margin-bottom:12px;">
+      Reçois 3 astuces budget gratuites
+    </h2>
+    <p style="color:var(--gray-text); margin-bottom:24px; font-size:1rem; line-height:1.5;">
+      Inscris-toi et reçois immédiatement 3 astuces concrètes pour mieux gérer ton argent dès cette semaine — sans engagement.
+    </p>
+    <form id="ca-email-form" onsubmit="handleCaEmail(event)" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; max-width:480px; margin:0 auto 12px;">
+      <input type="hidden" name="access_key" value="d97a8c73-b827-48bb-b437-e053a73fdb7e">
+      <input type="hidden" name="subject" value="Lead controle-argent">
+      <input type="hidden" name="from_name" value="Contrôle Argent">
+      <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+      <input type="email" name="email" placeholder="ton@email.fr" required
+        style="flex:1; min-width:200px; padding:12px 16px; border:2px solid var(--green); border-radius:8px; font-size:1rem; outline:none; background:var(--white);">
+      <button type="submit"
+        style="padding:12px 24px; background:var(--green); color:var(--white); border:none; border-radius:8px; font-size:1rem; font-weight:700; cursor:pointer; white-space:nowrap;">
+        Recevoir les astuces →
+      </button>
+    </form>
+    <p style="font-size:0.8rem; color:var(--gray-muted);">Pas de spam. Désinscription en 1 clic. (RGPD)</p>
+    <div id="ca-email-success" style="display:none; color:var(--green); font-weight:700; margin-top:16px; font-size:1rem;">
+      Merci ! Tu vas recevoir tes 3 astuces budget par email.
+    </div>
+  </div>
+</section>
+
 <!-- ── CTA FINAL ────────────────────────────────────────────────────────────── -->
 <div class="cta-section">
   <h2>Prêt à reprendre le contrôle de ton argent ?</h2>
@@ -529,5 +557,32 @@
   <p style="margin-top:6px;">Chaîne YouTube : <a href="https://www.youtube.com/@tonargentexplique" target="_blank">@tonargentexplique</a></p>
 </footer>
 
+<script>
+function handleCaEmail(e) {
+  e.preventDefault();
+  var form = e.target;
+  var success = document.getElementById('ca-email-success');
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: new FormData(form)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    if (d.success) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    } else {
+      success.textContent = 'Une erreur est survenue. Réessaie dans un instant.';
+      success.style.color = '#E53935';
+      success.style.display = 'block';
+    }
+  })
+  .catch(function(){
+    success.textContent = 'Une erreur est survenue. Réessaie dans un instant.';
+    success.style.color = '#E53935';
+    success.style.display = 'block';
+  });
+}
+</script>
 </body>
 </html>
